@@ -16,8 +16,6 @@ def multpilier(a, b):
     return a * b
 
 
-
-
 def transform(num):
     int_of_num = (num >> 16)
     if int_of_num < 0x8:
@@ -49,7 +47,6 @@ print(hex(anstotal))
 anstotal = anstotal >> 1
 print(hex(anstotal))
 print('total ans = ', transform(anstotal))
-
 
 
 a1 = 8.431244e-01 * 6.586609e-01
