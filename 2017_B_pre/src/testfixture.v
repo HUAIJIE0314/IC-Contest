@@ -1,9 +1,7 @@
 `timescale 1ns/10ps
 `define CYCLE      10.0          	  // Modify your clock period here
-`define SDFFILE    "../SYN/DT_syn.sdf"	  // Modify your sdf file name
+`define SDFFILE    "DT_syn.sdf"	  // Modify your sdf file name
 `define End_CYCLE  100000000             // Modify cycle times once your design need more cycle times!
-
-`define TB1
 
 `ifdef TB1
 	`define PAT        "./dat/Geometry_sti.dat"    
