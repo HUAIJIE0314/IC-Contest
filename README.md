@@ -20,7 +20,7 @@ class E(大學組)
 
 `初賽`
 
-[2018 E 初賽 - (Image Display Control]()
+[2018 E 初賽 - Image Display Control]()
 
 <!--
 
