@@ -4,7 +4,7 @@
 
 `初賽`
 
-[2016 B 初賽 - Local Binary Patterns]()
+[2016 B 初賽 - Local Binary Patterns](https://github.com/HUAIJIE0314/IC_Contest/tree/main/2016_B_pre)
 
 [2017 B 初賽 - Distance Transform](https://github.com/HUAIJIE0314/IC-Contest/tree/main/2017_B_pre)
 
