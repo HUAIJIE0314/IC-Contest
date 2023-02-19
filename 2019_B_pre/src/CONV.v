@@ -104,7 +104,7 @@ wire signed [19:0] totalResult;
 //---------------------------------------------------------------------
 //   WIRE CONNECTION              
 //---------------------------------------------------------------------
-// << icoorX & icoorY >>
+// << icoorX >>
 assign icoorX_L = (fstate < COUNTADDR2)?(icoorX - 6'd1):((icoorX << 1)       );
 assign icoorX_R = (fstate < COUNTADDR2)?(icoorX + 6'd1):((icoorX << 1) + 6'd1);
 assign icoorY_U = (fstate < COUNTADDR2)?(icoorY - 6'd1):((icoorY << 1)       );
