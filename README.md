@@ -3,6 +3,7 @@
 ## class B(研究所組)
 
 `初賽`
+[2016 B 初賽 - (Local Binary Patterns]()
 
 [2017 B 初賽 - Distance Transform](https://github.com/HUAIJIE0314/IC-Contest/tree/main/2017_B_pre)
 
@@ -13,6 +14,10 @@
 `決賽`
 
 ---
+
+class E(大學組)
+`初賽`
+[2018 E 初賽 - (Image Display Control]()
 
 <!--
 
