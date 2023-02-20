@@ -20,7 +20,7 @@ class E(大學組)
 
 `初賽`
 
-[2018 E 初賽 - Image Display Control](https://github.com/HUAIJIE0314/IC_Contest/tree/main/2019_E_pre)
+[2018 E 初賽 - Image Display Control](https://github.com/HUAIJIE0314/IC_Contest/tree/main/2018_E_pre)
 
 <!--
 
