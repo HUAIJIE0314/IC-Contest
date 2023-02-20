@@ -1,12 +1,23 @@
 
 `timescale 1ns/10ps
-module LBP ( clk, reset, gray_addr, gray_req, gray_ready, gray_data, lbp_addr, lbp_valid, lbp_data, finish);
-input   	                clk;
-input   	              reset;
-output  reg [13:0] 	gray_addr;
-output  reg       	 gray_req;
-input   	         gray_ready;
-input       [ 7:0] 	gray_data;
+module LBP (
+  clk, 
+  reset, 
+  gray_addr, 
+  gray_req, 
+  gray_ready, 
+  gray_data, 
+  lbp_addr, 
+  lbp_valid, 
+  lbp_data, 
+  finish
+);
+input                     clk;
+input                   reset;
+output  reg [13:0]  gray_addr;
+output  reg          gray_req;
+input              gray_ready;
+input       [ 7:0]  gray_data;
 output      [13:0]   lbp_addr;
 output  reg         lbp_valid;
 output  reg [ 7:0]   lbp_data;
@@ -30,7 +41,7 @@ reg  [2:0]  fstate;
 reg  [6:0]   coorX;
 reg  [6:0]   coorY;
 reg  [7:0]  center;
-reg  [3:0] counter;
+reg  [2:0] counter;
 reg  [7:0]  weight;
 // << wire >>
 wire [6:0] coorX_L;
@@ -86,12 +97,11 @@ end
 
 // << counter >>
 always@(posedge clk or posedge reset)begin
-  if(reset)counter <= 4'd0;
+  if(reset)counter <= 3'd0;
   else begin
     if(fstate == CAL_LBP)begin
-      if(counter == 4'd3)    counter <= counter + 4'd2;
-      else if(counter < 4'd8)counter <= counter + 4'd1;
-      else                   counter <= 4'd0;
+      if(counter < 3'd7)counter <= counter + 3'd1;
+      else              counter <= 3'd0;
     end
   end
 end
@@ -119,11 +129,11 @@ always@(*)begin
         4'd1:gray_addr = {coorY_U, coorX  };
         4'd2:gray_addr = {coorY_U, coorX_R};
         4'd3:gray_addr = {coorY  , coorX_L};
-        //4'd4:gray_addr = {coorY  , coorX  };
-        4'd5:gray_addr = {coorY  , coorX_R};
-        4'd6:gray_addr = {coorY_D, coorX_L};
-        4'd7:gray_addr = {coorY_D, coorX  };
-        4'd8:gray_addr = {coorY_D, coorX_R};
+        //   gray_addr = {coorY  , coorX  };
+        4'd4:gray_addr = {coorY  , coorX_R};
+        4'd5:gray_addr = {coorY_D, coorX_L};
+        4'd6:gray_addr = {coorY_D, coorX  };
+        4'd7:gray_addr = {coorY_D, coorX_R};
         default:gray_addr = {coorY  , coorX  };
       endcase
     end
@@ -145,8 +155,8 @@ always@(posedge clk or posedge reset)begin
         fstate <= CAL_LBP;
       end
       CAL_LBP:begin
-        if(counter == 4'd8)fstate <= WRITE_MEM;
-        else               fstate <= CAL_LBP;
+        if(&counter)fstate <= WRITE_MEM;
+        else        fstate <= CAL_LBP;
       end
       WRITE_MEM:begin
         if(coorX == 7'd126 && coorY == 7'd126)fstate <= FINISH;
