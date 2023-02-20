@@ -1,0 +1,82 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : LCD_CTRL
+Version: O-2018.06
+Date   : Mon Feb 20 10:04:57 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: coorX_reg[2]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: map_reg[32][5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  LCD_CTRL           tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  coorX_reg[2]/CK (DFFSHQX8)               0.00       0.50 r
+  coorX_reg[2]/Q (DFFSHQX8)                0.30       0.80 f
+  U3513/Y (CLKINVX1)                       0.33       1.13 r
+  U4096/Y (NOR2X4)                         0.19       1.32 f
+  U2876/Y (CLKAND2X2)                      0.22       1.53 f
+  U2875/Y (CLKBUFX6)                       0.61       2.14 f
+  U7463/Y (AO22X1)                         0.57       2.71 f
+  U7464/Y (AOI221XL)                       0.48       3.18 r
+  U7466/Y (AND4X1)                         0.38       3.56 r
+  U4120/Y (OAI221X1)                       0.24       3.80 f
+  U3576/Y (CLKINVX1)                       0.16       3.95 r
+  U3577/Y (CLKBUFX3)                       0.39       4.34 r
+  U3072/Y (NOR2X4)                         0.15       4.49 f
+  U3721/Y (NAND2BX4)                       0.17       4.67 f
+  U3720/Y (AO21X2)                         0.26       4.93 f
+  U3570/Y (OR2X1)                          0.32       5.24 f
+  U4217/Y (AOI31X2)                        0.21       5.45 r
+  U4218/Y (INVX3)                          0.09       5.55 f
+  U4353/Y (OAI211X2)                       0.23       5.78 r
+  U7946/Y (AOI32X2)                        0.22       6.00 f
+  U3677/Y (CLKINVX6)                       0.10       6.10 r
+  U4857/Y (AOI21X4)                        0.11       6.21 f
+  U3608/Y (INVX12)                         0.17       6.38 r
+  U3081/Y (INVX12)                         0.11       6.48 f
+  U7954/Y (OAI22X1)                        0.37       6.85 r
+  U3115/Y (CLKINVX1)                       0.48       7.33 f
+  U3697/Y (OAI222X2)                       0.39       7.72 r
+  U7973/Y (AO22X4)                         0.28       8.00 r
+  U7977/Y (OAI21X4)                        0.12       8.12 f
+  U4270/Y (BUFX20)                         0.19       8.31 f
+  U3607/Y (CLKINVX20)                      0.05       8.36 r
+  U4856/Y (OAI22X1)                        0.18       8.54 f
+  U4091/Y (OAI211X2)                       0.31       8.85 r
+  U3223/Y (CLKBUFX12)                      0.46       9.31 r
+  U3355/Y (AOI211X1)                       0.20       9.51 f
+  U3354/Y (OAI222XL)                       0.58      10.09 r
+  map_reg[32][5]/D (DFFRX1)                0.00      10.09 r
+  data arrival time                                  10.09
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  map_reg[32][5]/CK (DFFRX1)               0.00      10.40 r
+  library setup time                      -0.31      10.09
+  data required time                                 10.09
+  -----------------------------------------------------------
+  data required time                                 10.09
+  data arrival time                                 -10.09
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
