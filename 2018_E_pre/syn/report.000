@@ -1,15 +1,15 @@
-ftp±b¸¹(FTP number): 
+ftpå¸³è™Ÿ(FTP number): 
 
-§¹¦¨¼ÒÀÀ¤§´ú¸Õ¼Ë¥»µ¥¯Å(level of test pattern):A
-³q¹Lgate-level simulation¤§clock cycle time (ns)¡G13.5
+å®Œæˆæ¨¡æ“¬ä¹‹æ¸¬è©¦æ¨£æœ¬ç­‰ç´š(level of test pattern):A
+é€šégate-level simulationä¹‹clock cycle time (ns)ï¼š13.5
 --- RTL category---
-¨Ï¥Î¤§HDL¼ÒÀÀ¾¹¦WºÙ(HDL simulator ):ncverilog 
-RTLÀÉ®×¦WºÙ(RTL filename):LCD_CTRL.v            
+ä½¿ç”¨ä¹‹HDLæ¨¡æ“¬å™¨åç¨±(HDL simulator ):ncverilog 
+RTLæª”æ¡ˆåç¨±(RTL filename):LCD_CTRL.v            
 
 --- Pre-layout gate-level ---
-gate-levelÀÉ®×¦WºÙ(gate_level filename): LCD_CTRL_syn.v   
+gate-levelæª”æ¡ˆåç¨±(gate_level filename): LCD_CTRL_syn.v   
 gate-level sdf filename:LCD_CTRL_syn.sdf                      
-design compiler¦X¦¨¸ê®Æ®w(dc library):     
+design compileråˆæˆè³‡æ–™åº«(dc library):LCD_CTRL_syn.ddc      
 
------ª`·N¨Æ¶µ(annotation)--------------------------------------------------------
- (¨ä¾lª`·N¨Æ¶µ¨Ì¦U°ÑÁÉ¶¤¥îªº»İ¨D¶ñ¼g)
+-----æ³¨æ„äº‹é …(annotation)--------------------------------------------------------
+ (å…¶é¤˜æ³¨æ„äº‹é …ä¾å„åƒè³½éšŠä¼çš„éœ€æ±‚å¡«å¯«)
