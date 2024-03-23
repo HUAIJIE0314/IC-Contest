@@ -12,6 +12,10 @@
 
 [2019 B 初賽 - Image Convolutional Circuit](https://github.com/HUAIJIE0314/IC-Contest/tree/main/2019_B_pre)
 
+[2020 B 初賽 - String Matching Engine](https://github.com/HUAIJIE0314/IC-Contest/tree/main/2020_B_pre)
+
+[2022 B 初賽 - Job Assignment Machine](https://github.com/HUAIJIE0314/IC-Contest/tree/main/2022_B_pre)
+
 `決賽`
 
 ---
