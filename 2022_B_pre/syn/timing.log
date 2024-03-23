@@ -1,0 +1,110 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : JAM
+Version: P-2019.03-SP1-1
+Date   : Fri Mar  8 23:43:59 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: arr_reg[5][1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: arr_reg[5][1]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  JAM                tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  arr_reg[5][1]/CK (DFFRX4)                               0.00       0.50 r
+  arr_reg[5][1]/Q (DFFRX4)                                0.59       1.09 r
+  U372/Y (NAND2X4)                                        0.16       1.24 f
+  U222/Y (AOI32X2)                                        0.33       1.58 r
+  U549/Y (OAI2BB1X2)                                      0.23       1.81 r
+  U585/Y (AND2X6)                                         0.18       1.99 r
+  U215/Y (OAI211X2)                                       0.15       2.15 f
+  U541/Y (AND2X8)                                         0.25       2.40 f
+  U540/Y (INVX16)                                         0.13       2.52 r
+  U626/Y (NOR2X8)                                         0.10       2.62 f
+  U824/Y (AO22X4)                                         0.26       2.88 f
+  U829/Y (AOI221X2)                                       0.19       3.07 r
+  U755/Y (OA22X4)                                         0.28       3.35 r
+  U477/Y (INVX12)                                         0.14       3.49 f
+  instanceSomething[3].setNumber/P1_value[2] (setNumber_4)
+                                                          0.00       3.49 f
+  instanceSomething[3].setNumber/U4/Y (AND2X4)            0.18       3.67 f
+  instanceSomething[3].setNumber/U6/Y (OAI32X1)           0.30       3.97 r
+  instanceSomething[3].setNumber/U5/Y (INVX1)             0.19       4.15 f
+  instanceSomething[3].setNumber/U9/Y (OAI31X2)           0.15       4.30 r
+  instanceSomething[3].setNumber/U8/Y (AND2X6)            0.20       4.50 r
+  instanceSomething[3].setNumber/U3/Y (NAND2X4)           0.12       4.62 f
+  instanceSomething[3].setNumber/number_o[2] (setNumber_4)
+                                                          0.00       4.62 f
+  sort8/in4[2] (sort8)                                    0.00       4.62 f
+  sort8/S1_2/in2[2] (sort2_20)                            0.00       4.62 f
+  sort8/S1_2/U12/Y (CLKINVX4)                             0.09       4.71 r
+  sort8/S1_2/U4/Y (NAND2X4)                               0.08       4.80 f
+  sort8/S1_2/U8/Y (NAND2X6)                               0.09       4.89 r
+  sort8/S1_2/U17/Y (NAND3X2)                              0.10       4.99 f
+  sort8/S1_2/U13/Y (AND2X2)                               0.27       5.26 f
+  sort8/S1_2/U3/Y (NAND2X6)                               0.12       5.38 r
+  sort8/S1_2/U7/Y (INVX6)                                 0.08       5.45 f
+  sort8/S1_2/U19/Y (OAI22X4)                              0.17       5.62 r
+  sort8/S1_2/out1[1] (sort2_20)                           0.00       5.62 r
+  sort8/S2_1/in2[1] (sort4_2)                             0.00       5.62 r
+  sort8/S2_1/S1_1/in2[1] (sort2_14)                       0.00       5.62 r
+  sort8/S2_1/S1_1/U19/Y (INVX6)                           0.10       5.73 f
+  sort8/S2_1/S1_1/U9/Y (OAI211X2)                         0.23       5.96 r
+  sort8/S2_1/S1_1/U22/Y (OAI211X2)                        0.29       6.25 f
+  sort8/S2_1/S1_1/U14/Y (OR2X4)                           0.25       6.50 f
+  sort8/S2_1/S1_1/U1/Y (NAND2X6)                          0.09       6.59 r
+  sort8/S2_1/S1_1/out1[1] (sort2_14)                      0.00       6.59 r
+  sort8/S2_1/S2_1/in1[1] (sort2_12)                       0.00       6.59 r
+  sort8/S2_1/S2_1/U13/Y (NAND3X2)                         0.12       6.71 f
+  sort8/S2_1/S2_1/U19/Y (OA21X4)                          0.19       6.90 f
+  sort8/S2_1/S2_1/U9/Y (NAND2X8)                          0.12       7.02 r
+  sort8/S2_1/S2_1/U2/Y (INVX12)                           0.06       7.08 f
+  sort8/S2_1/S2_1/U21/Y (OAI22X4)                         0.18       7.26 r
+  sort8/S2_1/S2_1/out1[1] (sort2_12)                      0.00       7.26 r
+  sort8/S2_1/out1[1] (sort4_2)                            0.00       7.26 r
+  sort8/out1[1] (sort8)                                   0.00       7.26 r
+  U612/Y (BUFX16)                                         0.17       7.44 r
+  U410/Y (XNOR2X1)                                        0.26       7.70 r
+  U409/Y (NAND3X2)                                        0.32       8.02 f
+  U511/Y (NAND4X2)                                        0.22       8.24 r
+  U556/Y (BUFX12)                                         0.22       8.45 r
+  U462/Y (INVX4)                                          0.16       8.61 f
+  U709/Y (NOR3X2)                                         0.19       8.80 r
+  U637/Y (BUFX6)                                          0.20       9.00 r
+  U633/Y (NAND2X6)                                        0.11       9.12 f
+  U595/Y (OAI22XL)                                        0.61       9.73 r
+  U494/Y (AOI211X2)                                       0.28      10.01 f
+  U493/Y (OAI22X4)                                        0.20      10.21 r
+  arr_reg[5][1]/D (DFFRX4)                                0.00      10.21 r
+  data arrival time                                                 10.21
+
+  clock CLK (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  arr_reg[5][1]/CK (DFFRX4)                               0.00      10.40 r
+  library setup time                                     -0.19      10.21
+  data required time                                                10.21
+  --------------------------------------------------------------------------
+  data required time                                                10.21
+  data arrival time                                                -10.21
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
