@@ -1,4 +1,4 @@
-# IC contest - Cell Based
+# IC contest - Cell-Based
 
 ## class B(研究所組)
 
