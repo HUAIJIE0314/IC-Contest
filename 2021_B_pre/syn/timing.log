@@ -1,0 +1,232 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : geofence
+Version: P-2019.03-SP1-1
+Date   : Sun Mar 24 22:21:08 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: idx2_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: S_reg[10] (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  geofence           tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  idx2_reg[0]/CK (DFFRX4)                                 0.00       0.50 r
+  idx2_reg[0]/Q (DFFRX4)                                  0.58       1.08 f
+  U2800/Y (AND2X1)                                        0.35       1.44 f
+  U2744/Y (AND2X4)                                        0.36       1.80 f
+  U2935/Y (BUFX16)                                        0.24       2.04 f
+  U3816/Y (AOI222XL)                                      0.65       2.69 r
+  U2873/Y (NAND2XL)                                       0.40       3.09 f
+  U3737/Y (INVXL)                                         0.53       3.62 r
+  U3799/Y (INVX1)                                         0.29       3.91 f
+  sub_128/A[3] (geofence_DW01_sub_27)                     0.00       3.91 f
+  sub_128/U49/Y (NAND2X1)                                 0.43       4.34 r
+  sub_128/U39/Y (OAI21XL)                                 0.28       4.62 f
+  sub_128/U37/Y (AOI21X1)                                 0.43       5.05 r
+  sub_128/U30/Y (XOR2XL)                                  0.41       5.46 f
+  sub_128/DIFF[5] (geofence_DW01_sub_27)                  0.00       5.46 f
+  U3141/Y (AOI22X1)                                       0.41       5.87 r
+  U2862/Y (OAI21X4)                                       0.29       6.16 f
+  mult_76/a[5] (geofence_DW_mult_tc_0)                    0.00       6.16 f
+  mult_76/U330/Y (INVX3)                                  0.40       6.56 r
+  mult_76/U337/Y (XOR2X1)                                 0.37       6.94 f
+  mult_76/U325/Y (OAI2BB2XL)                              0.60       7.54 r
+  mult_76/U382/S (ADDHX1)                                 0.32       7.86 r
+  mult_76/U333/S (CMPR32X2)                               0.40       8.26 r
+  mult_76/U343/S (ADDFXL)                                 0.70       8.96 f
+  mult_76/product[5] (geofence_DW_mult_tc_0)              0.00       8.96 f
+  U2823/Y (BUFX2)                                         0.27       9.23 f
+  sub_77/B[5] (geofence_DW01_sub_2)                       0.00       9.23 f
+  sub_77/U27/Y (INVXL)                                    0.24       9.47 r
+  sub_77/U2_5/CO (ADDFXL)                                 0.86      10.32 r
+  sub_77/U2_6/CO (ADDFXL)                                 0.51      10.84 r
+  sub_77/U2_7/CO (ADDFHX2)                                0.28      11.11 r
+  sub_77/U2_8/CO (ADDFXL)                                 0.45      11.56 r
+  sub_77/U2_9/CO (ADDFXL)                                 0.50      12.06 r
+  sub_77/U2_10/CO (ADDFXL)                                0.49      12.55 r
+  sub_77/U2_11/CO (ADDFHX1)                               0.34      12.89 r
+  sub_77/U2_12/S (ADDFHX1)                                0.37      13.26 f
+  sub_77/DIFF[12] (geofence_DW01_sub_2)                   0.00      13.26 f
+  U3054/Y (AO22X1)                                        0.47      13.73 f
+  SQRT/a[14] (geofence_DW_sqrt_0)                         0.00      13.73 f
+  SQRT/u_absval_AInt/A[14] (geofence_DW01_absval_0)       0.00      13.73 f
+  SQRT/u_absval_AInt/U18/Y (INVX1)                        0.22      13.95 r
+  SQRT/u_absval_AInt/NEG/A[14] (geofence_DW01_inc_1)      0.00      13.95 r
+  SQRT/u_absval_AInt/NEG/U1_1_14/CO (ADDHXL)              0.33      14.28 r
+  SQRT/u_absval_AInt/NEG/U1_1_15/CO (ADDHXL)              0.35      14.64 r
+  SQRT/u_absval_AInt/NEG/U1_1_16/CO (ADDHXL)              0.42      15.06 r
+  SQRT/u_absval_AInt/NEG/U1_1_17/CO (ADDHX2)              0.23      15.29 r
+  SQRT/u_absval_AInt/NEG/U1_1_18/CO (ADDHXL)              0.35      15.64 r
+  SQRT/u_absval_AInt/NEG/U1_1_19/CO (ADDHX1)              0.28      15.92 r
+  SQRT/u_absval_AInt/NEG/U1_1_20/CO (ADDHXL)              0.36      16.28 r
+  SQRT/u_absval_AInt/NEG/U1_1_21/S (ADDHX1)               0.27      16.55 f
+  SQRT/u_absval_AInt/NEG/SUM[21] (geofence_DW01_inc_1)
+                                                          0.00      16.55 f
+  SQRT/u_absval_AInt/U3/Y (MX2X1)                         0.28      16.83 f
+  SQRT/u_absval_AInt/ABSVAL[21] (geofence_DW01_absval_0)
+                                                          0.00      16.83 f
+  SQRT/U26/Y (INVX1)                                      0.32      17.15 r
+  SQRT/U25/Y (NAND2BX4)                                   0.17      17.32 f
+  SQRT/U42/Y (AND2X8)                                     0.22      17.54 f
+  SQRT/U114/Y (INVX20)                                    0.12      17.66 r
+  SQRT/U50/Y (NOR2X2)                                     0.09      17.75 f
+  SQRT/U20/Y (OR2X2)                                      0.24      17.99 f
+  SQRT/U18/Y (NAND2X2)                                    0.16      18.16 r
+  SQRT/u_fa_PartRem_9_3/CO (ADDFHX2)                      0.40      18.55 r
+  SQRT/U103/Y (AO21X4)                                    0.19      18.74 r
+  SQRT/U37/Y (INVX16)                                     0.13      18.87 f
+  SQRT/U61/Y (XNOR2X4)                                    0.15      19.02 f
+  SQRT/u_fa_PartRem_8_2/CO (ADDFX1)                       0.44      19.45 f
+  SQRT/u_fa_PartRem_8_3/CO (ADDFXL)                       0.51      19.96 f
+  SQRT/u_fa_PartRem_8_4/CO (ADDFHX2)                      0.30      20.26 f
+  SQRT/U101/Y (NOR2BX4)                                   0.15      20.41 r
+  SQRT/U23/Y (BUFX20)                                     0.17      20.58 r
+  SQRT/U109/Y (XNOR2X2)                                   0.20      20.78 f
+  SQRT/u_fa_PartRem_7_2/CO (ADDFX1)                       0.48      21.26 f
+  SQRT/u_fa_PartRem_7_3/CO (ADDFHX1)                      0.33      21.59 f
+  SQRT/u_fa_PartRem_7_4/CO (ADDFX1)                       0.36      21.95 f
+  SQRT/u_fa_PartRem_7_5/CO (ADDFHX2)                      0.27      22.23 f
+  SQRT/U97/Y (NOR2BX4)                                    0.14      22.37 r
+  SQRT/U34/Y (BUFX20)                                     0.19      22.56 r
+  SQRT/U65/Y (XNOR2X4)                                    0.16      22.72 f
+  SQRT/u_fa_PartRem_6_2/CO (ADDFX1)                       0.44      23.16 f
+  SQRT/u_fa_PartRem_6_3/CO (ADDFX2)                       0.37      23.53 f
+  SQRT/u_fa_PartRem_6_4/CO (ADDFXL)                       0.50      24.03 f
+  SQRT/u_fa_PartRem_6_5/CO (CMPR32X2)                     0.40      24.44 f
+  SQRT/u_fa_PartRem_6_6/CO (ADDFHX2)                      0.27      24.70 f
+  SQRT/U93/Y (NOR2BX4)                                    0.12      24.83 r
+  SQRT/U41/Y (BUFX12)                                     0.23      25.05 r
+  SQRT/U63/Y (OA21X2)                                     0.22      25.28 r
+  SQRT/U62/Y (AOI2BB1X1)                                  0.11      25.39 f
+  SQRT/U7/Y (INVX1)                                       0.28      25.67 r
+  SQRT/u_fa_PartRem_5_3/CO (ADDFHX2)                      0.43      26.10 r
+  SQRT/u_fa_PartRem_5_4/CO (ADDFXL)                       0.47      26.57 r
+  SQRT/u_fa_PartRem_5_5/CO (ADDFHX2)                      0.28      26.85 r
+  SQRT/u_fa_PartRem_5_6/CO (ADDFX1)                       0.32      27.17 r
+  SQRT/u_fa_PartRem_5_7/CO (ADDFHX2)                      0.26      27.43 r
+  SQRT/U95/Y (NOR2BX4)                                    0.11      27.54 f
+  SQRT/U27/Y (BUFX20)                                     0.16      27.70 f
+  SQRT/U76/Y (OAI21X1)                                    0.24      27.95 r
+  SQRT/U13/Y (OAI21X1)                                    0.28      28.23 f
+  SQRT/u_fa_PartRem_4_3/CO (ADDFHX2)                      0.45      28.68 f
+  SQRT/u_fa_PartRem_4_4/CO (ADDFHX2)                      0.23      28.91 f
+  SQRT/u_fa_PartRem_4_5/CO (ADDFXL)                       0.49      29.40 f
+  SQRT/u_fa_PartRem_4_6/CO (ADDFHX2)                      0.28      29.68 f
+  SQRT/u_fa_PartRem_4_7/CO (ADDFX1)                       0.34      30.02 f
+  SQRT/u_fa_PartRem_4_8/CO (ADDFHX2)                      0.27      30.30 f
+  SQRT/U89/Y (NOR2BX4)                                    0.14      30.44 r
+  SQRT/U33/Y (BUFX20)                                     0.20      30.64 r
+  SQRT/U55/Y (OAI21X4)                                    0.09      30.72 f
+  SQRT/U39/Y (OAI21X1)                                    0.31      31.03 r
+  SQRT/u_fa_PartRem_3_3/CO (ADDFHX2)                      0.46      31.49 r
+  SQRT/u_fa_PartRem_3_4/CO (ADDFX1)                       0.32      31.81 r
+  SQRT/u_fa_PartRem_3_5/CO (ADDFHX2)                      0.24      32.05 r
+  SQRT/u_fa_PartRem_3_6/CO (ADDFXL)                       0.47      32.52 r
+  SQRT/u_fa_PartRem_3_7/CO (ADDFHX2)                      0.28      32.80 r
+  SQRT/u_fa_PartRem_3_8/CO (ADDFX1)                       0.32      33.12 r
+  SQRT/u_fa_PartRem_3_9/CO (ADDFHX2)                      0.26      33.38 r
+  SQRT/U92/Y (NOR2BX4)                                    0.11      33.49 f
+  SQRT/U12/Y (BUFX20)                                     0.16      33.66 f
+  SQRT/U44/Y (OAI21X4)                                    0.12      33.78 r
+  SQRT/U121/Y (OAI21X1)                                   0.23      34.01 f
+  SQRT/u_fa_PartRem_2_3/CO (ADDFHX2)                      0.44      34.45 f
+  SQRT/u_fa_PartRem_2_4/CO (ADDFXL)                       0.49      34.94 f
+  SQRT/u_fa_PartRem_2_5/CO (ADDFHX2)                      0.28      35.22 f
+  SQRT/u_fa_PartRem_2_6/CO (ADDFHX2)                      0.23      35.45 f
+  SQRT/u_fa_PartRem_2_7/CO (ADDFX1)                       0.34      35.80 f
+  SQRT/u_fa_PartRem_2_8/CO (ADDFHX2)                      0.25      36.05 f
+  SQRT/u_fa_PartRem_2_9/CO (ADDFXL)                       0.49      36.54 f
+  SQRT/u_fa_PartRem_2_10/CO (ADDFHX2)                     0.30      36.84 f
+  SQRT/U90/Y (NOR2BX4)                                    0.14      36.97 r
+  SQRT/U38/Y (BUFX16)                                     0.20      37.17 r
+  SQRT/U51/Y (XNOR2X4)                                    0.18      37.35 f
+  SQRT/u_fa_PartRem_1_2/CO (ADDFHX2)                      0.40      37.75 f
+  SQRT/u_fa_PartRem_1_3/CO (ADDFXL)                       0.49      38.24 f
+  SQRT/u_fa_PartRem_1_4/CO (ADDFHX2)                      0.28      38.52 f
+  SQRT/u_fa_PartRem_1_5/CO (ADDFXL)                       0.49      39.01 f
+  SQRT/u_fa_PartRem_1_6/CO (ADDFHX2)                      0.28      39.29 f
+  SQRT/u_fa_PartRem_1_7/CO (ADDFHX2)                      0.23      39.52 f
+  SQRT/u_fa_PartRem_1_8/CO (ADDFXL)                       0.49      40.01 f
+  SQRT/u_fa_PartRem_1_9/CO (ADDFHX2)                      0.28      40.29 f
+  SQRT/u_fa_PartRem_1_10/CO (ADDFX1)                      0.34      40.63 f
+  SQRT/u_fa_PartRem_1_11/CO (ADDFHX2)                     0.27      40.91 f
+  SQRT/U120/Y (NOR2BX4)                                   0.21      41.12 r
+  SQRT/U49/Y (OAI21X2)                                    0.12      41.24 f
+  SQRT/U6/Y (OA21X2)                                      0.27      41.51 f
+  SQRT/U73/Y (OAI2BB1XL)                                  0.33      41.84 f
+  SQRT/U74/Y (OA21X4)                                     0.22      42.06 f
+  SQRT/U119/Y (OAI2BB1X1)                                 0.25      42.31 f
+  SQRT/U43/Y (OAI21X2)                                    0.19      42.50 r
+  SQRT/U125/Y (NOR2X2)                                    0.14      42.64 f
+  SQRT/U8/Y (AOI2BB2X1)                                   0.36      43.00 f
+  SQRT/U16/Y (AND2X2)                                     0.26      43.26 f
+  SQRT/U66/Y (OA22X2)                                     0.38      43.64 f
+  SQRT/U72/Y (OAI2BB1XL)                                  0.33      43.97 f
+  SQRT/U71/Y (OA21X4)                                     0.22      44.19 f
+  SQRT/U116/Y (OAI2BB1X1)                                 0.25      44.44 f
+  SQRT/U75/Y (OAI21X2)                                    0.18      44.63 r
+  SQRT/U126/Y (NOR2X1)                                    0.16      44.79 f
+  SQRT/U108/Y (AOI2BB2X1)                                 0.38      45.17 f
+  SQRT/U10/Y (AND2X2)                                     0.27      45.43 f
+  SQRT/U22/Y (OA22X4)                                     0.28      45.71 f
+  SQRT/U70/Y (OAI2BB1XL)                                  0.32      46.02 f
+  SQRT/U69/Y (OA21X4)                                     0.22      46.24 f
+  SQRT/U77/Y (OAI2BB1X4)                                  0.15      46.39 f
+  SQRT/U82/Y (OAI211X4)                                   0.28      46.67 r
+  SQRT/root[0] (geofence_DW_sqrt_0)                       0.00      46.67 r
+  add_90/A[0] (geofence_DW01_inc_0)                       0.00      46.67 r
+  add_90/U1_1_1/CO (CMPR22X4)                             0.16      46.83 r
+  add_90/U1_1_2/CO (ADDHX4)                               0.15      46.98 r
+  add_90/U1_1_3/CO (ADDHX2)                               0.18      47.15 r
+  add_90/U1_1_4/CO (CMPR22X2)                             0.19      47.34 r
+  add_90/U1_1_5/CO (ADDHX1)                               0.26      47.60 r
+  add_90/U1_1_6/CO (ADDHX1)                               0.27      47.87 r
+  add_90/U1_1_7/CO (ADDHX1)                               0.30      48.17 r
+  add_90/U1_1_8/CO (CMPR22X2)                             0.23      48.40 r
+  add_90/U1_1_9/CO (CMPR22X2)                             0.22      48.61 r
+  add_90/U2/Y (CLKINVX1)                                  0.14      48.75 f
+  add_90/U3/Y (NAND2X1)                                   0.17      48.92 r
+  add_90/U1/Y (OAI2BB1X1)                                 0.14      49.06 f
+  add_90/SUM[10] (geofence_DW01_inc_0)                    0.00      49.06 f
+  U2837/Y (CLKBUFX3)                                      0.37      49.43 f
+  add_0_root_add_0_root_add_158_S2_2/B[9] (geofence_DW01_add_1)
+                                                          0.00      49.43 f
+  add_0_root_add_0_root_add_158_S2_2/U1_9/CO (ADDFHX4)
+                                                          0.34      49.77 f
+  add_0_root_add_0_root_add_158_S2_2/U1/Y (CLKAND2X3)     0.16      49.93 f
+  add_0_root_add_0_root_add_158_S2_2/SUM[11] (geofence_DW01_add_1)
+                                                          0.00      49.93 f
+  U2839/Y (OAI2BB2XL)                                     0.30      50.23 f
+  S_reg[10]/D (DFFRX2)                                    0.00      50.23 f
+  data arrival time                                                 50.23
+
+  clock clk (rise edge)                                  50.00      50.00
+  clock network delay (ideal)                             0.50      50.50
+  clock uncertainty                                      -0.10      50.40
+  S_reg[10]/CK (DFFRX2)                                   0.00      50.40 r
+  library setup time                                     -0.17      50.23
+  data required time                                                50.23
+  --------------------------------------------------------------------------
+  data required time                                                50.23
+  data arrival time                                                -50.23
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1
