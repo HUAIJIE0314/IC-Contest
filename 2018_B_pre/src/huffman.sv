@@ -79,12 +79,12 @@ integer i, j, k, l;
 //        MODULE INSTANTAITE                             
 //---------------------------------------------------------------------
 SORT_element6 SORT_element6(
-  .index_data1_i(array[0]), //{3b index, 8b data}
-  .index_data2_i(array[1]), //{3b index, 8b data}
-  .index_data3_i(array[2]), //{3b index, 8b data}
-  .index_data4_i(array[3]), //{3b index, 8b data}
-  .index_data5_i(array[4]), //{3b index, 8b data}
-  .index_data6_i(array[5]), //{3b index, 8b data}
+  .index_data1_i(array[0]),   //{3b index, 8b data}
+  .index_data2_i(array[1]),   //{3b index, 8b data}
+  .index_data3_i(array[2]),   //{3b index, 8b data}
+  .index_data4_i(array[3]),   //{3b index, 8b data}
+  .index_data5_i(array[4]),   //{3b index, 8b data}
+  .index_data6_i(array[5]),   //{3b index, 8b data}
   .index_data1_o(sortOut[0]), //{3b index, 8b data}
   .index_data2_o(sortOut[1]), //{3b index, 8b data}
   .index_data3_o(sortOut[2]), //{3b index, 8b data}
@@ -183,16 +183,6 @@ end
 
 
 // << ptr >>
-/*
-always_ff@(posedge clk or posedge reset)begin
-  if(reset)for(integer k=0;k<6;k=k+1)ptr[k] <= 3'd0;
-  else if(fstate == IDLE)for(integer k=0;k<6;k=k+1)ptr[k] <= 3'd0;
-  else if(fstate == )begin
-    
-  end
-end
-*/
-//integer idx3;
 always_ff@(posedge clk or posedge reset)begin:ALWAYS_BLOCK2
   if(reset)for(integer idx3=0;idx3<6;idx3=idx3+1)ptr[idx3] <= 3'd0;
   else if(fstate == IDLE)for(integer idx3=0;idx3<6;idx3=idx3+1)ptr[idx3] <= 3'd0;
@@ -201,7 +191,6 @@ always_ff@(posedge clk or posedge reset)begin:ALWAYS_BLOCK2
       ptr[level] <= ptr[level] + 3'd1;
       ptr[level+1] <= ptr[level+1] + 3'd1;
     end
-    //else if(idx3[2:0] <= level+1)for(integer idx3=0;idx3<6;idx3=idx3+1)ptr[idx3] <= ptr[idx3] + 3'd1;
     else begin
       for(integer idx3=0;idx3<6;idx3=idx3+1)begin
         if(idx3[2:0] <= level+1)ptr[idx3] <= ptr[idx3] + 3'd1;
@@ -222,16 +211,6 @@ end
 
 
 // << mask >>
-/*
-always_ff@(posedge clk or posedge reset)begin
-  if(reset)for(integer j=0;j<6;j=j+1)mask[j] <= 8'd0;
-  else if(fstate == IDLE)for(integer j=0;j<6;j=j+1)mask[j] <= 8'd0;
-  else if(fstate == GEN_CODE)begin
-    //if(currentSum > array[counter+1])
-  end
-end
-*/
-//integer idx4;
 always_ff@(posedge clk or posedge reset)begin:ALWAYS_BLOCK3
   if(reset)for(integer idx4=0;idx4<6;idx4=idx4+1)mask[idx4] <= 8'd0;
   else begin
@@ -245,17 +224,6 @@ end
 
 
 // << code >>
-/*
-always_ff@(posedge clk or posedge reset)begin
-  if(reset)for(integer l=0;l<6;l=l+1)code[l] <= 3'd0;
-  else if(fstate == IDLE)for(integer l=0;l<6;l=l+1)code[l] <= 3'd0;
-  //else if()begin
-  
-  //end
-end
-*/
-
-//integer idx5;
 always_ff@(posedge clk or posedge reset)begin:ALWAYS_BLOCK4
   if(reset)for(integer idx5=0;idx5<6;idx5=idx5+1)code[idx5] <= 8'd0;
   else if(fstate == IDLE)for(integer idx5=0;idx5<6;idx5=idx5+1)code[idx5] <= 8'd0;
@@ -347,8 +315,6 @@ end
 //        FSM-output
 //---------------------------------------------------------------------
 always_comb begin
-  //{HC1, HC2, HC3, HC4, HC5, HC6} = 48'd0;
-  //{M1, M2, M3, M4, M5, M6} = 48'd0;
   CNT1 = 8'd0;
   CNT2 = 8'd0;
   CNT3 = 8'd0;
@@ -356,7 +322,6 @@ always_comb begin
   CNT5 = 8'd0;
   CNT6 = 8'd0;
   CNT_valid = 1'b0;
-  //code_valid = 1'b0;
   unique case(fstate)
     SORT:begin
       CNT1 = array[0][7:0];
@@ -368,8 +333,6 @@ always_comb begin
       CNT_valid = 1'b1;
     end
     default:begin
-      //{HC1, HC2, HC3, HC4, HC5, HC6} = 48'd0;
-      //{M1, M2, M3, M4, M5, M6} = 48'd0;
       CNT1 = 8'd0;
       CNT2 = 8'd0;
       CNT3 = 8'd0;
@@ -377,7 +340,6 @@ always_comb begin
       CNT5 = 8'd0;
       CNT6 = 8'd0;
       CNT_valid = 1'b0;
-      //code_valid = 1'b0;
     end
   endcase
 end
