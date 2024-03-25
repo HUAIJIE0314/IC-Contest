@@ -1,0 +1,127 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : huffman
+Version: P-2019.03-SP1-1
+Date   : Mon Mar 25 16:23:45 2024
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: array_reg[0][3]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: array_reg[3][0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  huffman            tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  array_reg[0][3]/CK (DFFRX1)                             0.00       0.50 r
+  array_reg[0][3]/Q (DFFRX1)                              0.60       1.10 f
+  U6987/Y (BUFX12)                                        0.27       1.38 f
+  SORT_element6/index_data1_i[3] (SORT_element6)          0.00       1.38 f
+  SORT_element6/STAGE1_1/index_data1_i[3] (SORT_element3_0)
+                                                          0.00       1.38 f
+  SORT_element6/STAGE1_1/STAGE1/index_data1_i[3] (SORT_element2_6)
+                                                          0.00       1.38 f
+  SORT_element6/STAGE1_1/STAGE1/U51/Y (AO22X4)            0.24       1.61 f
+  SORT_element6/STAGE1_1/STAGE1/U63/Y (OAI221X2)          0.26       1.87 r
+  SORT_element6/STAGE1_1/STAGE1/U33/Y (NAND4X4)           0.18       2.05 f
+  SORT_element6/STAGE1_1/STAGE1/U37/Y (NAND2X6)           0.13       2.18 r
+  SORT_element6/STAGE1_1/STAGE1/U27/Y (INVX16)            0.10       2.28 f
+  SORT_element6/STAGE1_1/STAGE1/U40/Y (MX2X6)             0.27       2.56 f
+  SORT_element6/STAGE1_1/STAGE1/index_data2_o[1] (SORT_element2_6)
+                                                          0.00       2.56 f
+  SORT_element6/STAGE1_1/STAGE2/index_data1_i[1] (SORT_element2_5)
+                                                          0.00       2.56 f
+  SORT_element6/STAGE1_1/STAGE2/U14/Y (INVXL)             0.28       2.83 r
+  SORT_element6/STAGE1_1/STAGE2/U61/Y (AO21X4)            0.22       3.05 r
+  SORT_element6/STAGE1_1/STAGE2/U7/Y (AND2X4)             0.15       3.20 r
+  SORT_element6/STAGE1_1/STAGE2/U9/Y (NOR3X4)             0.07       3.27 f
+  SORT_element6/STAGE1_1/STAGE2/U42/Y (OR3X6)             0.21       3.48 f
+  SORT_element6/STAGE1_1/STAGE2/U43/Y (NAND2X8)           0.09       3.57 r
+  SORT_element6/STAGE1_1/STAGE2/U31/Y (INVX12)            0.08       3.65 f
+  SORT_element6/STAGE1_1/STAGE2/U25/Y (CLKMX2X2)          0.38       4.03 r
+  SORT_element6/STAGE1_1/STAGE2/index_data1_o[6] (SORT_element2_5)
+                                                          0.00       4.03 r
+  SORT_element6/STAGE1_1/STAGE3/index_data2_i[6] (SORT_element2_4)
+                                                          0.00       4.03 r
+  SORT_element6/STAGE1_1/STAGE3/U27/Y (INVX3)             0.11       4.14 f
+  SORT_element6/STAGE1_1/STAGE3/U36/Y (NAND2X2)           0.16       4.29 r
+  SORT_element6/STAGE1_1/STAGE3/U59/Y (CLKINVX1)          0.17       4.46 f
+  SORT_element6/STAGE1_1/STAGE3/U58/Y (AOI2BB1X2)         0.20       4.66 r
+  SORT_element6/STAGE1_1/STAGE3/U37/Y (NAND3X4)           0.13       4.79 f
+  SORT_element6/STAGE1_1/STAGE3/U41/Y (NAND2X4)           0.11       4.90 r
+  SORT_element6/STAGE1_1/STAGE3/U29/Y (INVX6)             0.07       4.96 f
+  SORT_element6/STAGE1_1/STAGE3/U10/Y (CLKBUFX20)         0.17       5.14 f
+  SORT_element6/STAGE1_1/STAGE3/U3/Y (CLKMX2X12)          0.36       5.50 f
+  SORT_element6/STAGE1_1/STAGE3/index_data2_o[2] (SORT_element2_4)
+                                                          0.00       5.50 f
+  SORT_element6/STAGE1_1/index_data2_o[2] (SORT_element3_0)
+                                                          0.00       5.50 f
+  SORT_element6/STAGE2_2/index_data1_i[2] (SORT_element2_11)
+                                                          0.00       5.50 f
+  SORT_element6/STAGE2_2/U11/Y (INVX8)                    0.06       5.56 r
+  SORT_element6/STAGE2_2/U3/Y (AND2X4)                    0.16       5.72 r
+  SORT_element6/STAGE2_2/U2/Y (AOI2BB1X2)                 0.22       5.94 r
+  SORT_element6/STAGE2_2/U56/Y (AOI221X2)                 0.11       6.05 f
+  SORT_element6/STAGE2_2/U59/Y (OAI31X2)                  0.36       6.41 r
+  SORT_element6/STAGE2_2/U17/Y (INVX8)                    0.19       6.60 f
+  SORT_element6/STAGE2_2/U18/Y (BUFX20)                   0.19       6.79 f
+  SORT_element6/STAGE2_2/U25/Y (CLKMX2X8)                 0.41       7.19 f
+  SORT_element6/STAGE2_2/index_data2_o[5] (SORT_element2_11)
+                                                          0.00       7.19 f
+  SORT_element6/STAGE3_2/index_data1_i[5] (SORT_element2_8)
+                                                          0.00       7.19 f
+  SORT_element6/STAGE3_2/U23/Y (NAND2X6)                  0.09       7.29 r
+  SORT_element6/STAGE3_2/U28/Y (INVX3)                    0.06       7.35 f
+  SORT_element6/STAGE3_2/U31/Y (OA21X4)                   0.21       7.56 f
+  SORT_element6/STAGE3_2/U7/Y (NAND2X4)                   0.09       7.64 r
+  SORT_element6/STAGE3_2/U6/Y (NAND4X4)                   0.11       7.76 f
+  SORT_element6/STAGE3_2/U33/Y (OA21X4)                   0.18       7.94 f
+  SORT_element6/STAGE3_2/U20/Y (AND2X8)                   0.22       8.16 f
+  SORT_element6/STAGE3_2/U24/Y (CLKMX2X8)                 0.40       8.56 r
+  SORT_element6/STAGE3_2/index_data1_o[3] (SORT_element2_8)
+                                                          0.00       8.56 r
+  SORT_element6/STAGE4_1/index_data2_i[3] (SORT_element2_7)
+                                                          0.00       8.56 r
+  SORT_element6/STAGE4_1/U25/Y (INVX8)                    0.06       8.62 f
+  SORT_element6/STAGE4_1/U26/Y (CLKAND2X12)               0.12       8.74 f
+  SORT_element6/STAGE4_1/U44/Y (OAI32X2)                  0.24       8.98 r
+  SORT_element6/STAGE4_1/U58/Y (OAI211X2)                 0.21       9.19 f
+  SORT_element6/STAGE4_1/U32/Y (AND2X8)                   0.19       9.38 f
+  SORT_element6/STAGE4_1/U7/Y (CLKBUFX20)                 0.18       9.56 f
+  SORT_element6/STAGE4_1/U31/Y (CLKMX2X2)                 0.25       9.80 r
+  SORT_element6/STAGE4_1/index_data2_o[0] (SORT_element2_7)
+                                                          0.00       9.80 r
+  SORT_element6/index_data4_o[0] (SORT_element6)          0.00       9.80 r
+  U7268/Y (NAND2X1)                                       0.12       9.92 f
+  U7097/Y (NAND3BX1)                                      0.27      10.19 r
+  array_reg[3][0]/D (DFFRX4)                              0.00      10.19 r
+  data arrival time                                                 10.19
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  array_reg[3][0]/CK (DFFRX4)                             0.00      10.40 r
+  library setup time                                     -0.21      10.19
+  data required time                                                10.19
+  --------------------------------------------------------------------------
+  data required time                                                10.19
+  data arrival time                                                -10.19
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

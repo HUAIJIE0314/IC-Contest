@@ -1,5 +1,6 @@
 # Read all Files
-read_verilog huffman.v
+#read_verilog huffman.v
+read_file -format sverilog huffman.sv
 current_design huffman
 link
 
@@ -7,8 +8,9 @@ link
 source -echo -verbose huffman.sdc
 
 # Synthesis all design
+set_max_area 0
 compile -map_effort high -area_effort high
-compile -map_effort high -area_effort high -inc
+#compile_ultra -inc -area_high_effort_script
 
 write -format ddc  -hierarchy -output "huffman_syn.ddc"
 write_sdf huffman_syn.sdf

@@ -1,0 +1,18 @@
+C:/ICC_Practice_with_David/2018_grad_cell_huffman/huffman.sv {1 {vlog -work work -sv -stats=none C:/ICC_Practice_with_David/2018_grad_cell_huffman/huffman.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module huffman
+-- Compiling module SORT_element6
+-- Compiling module SORT_element2
+-- Compiling module SORT_element3
+
+Top level modules:
+	huffman
+
+} {} {}} C:/ICC_Practice_with_David/2018_grad_cell_huffman/tb.v {1 {vlog -work work -stats=none C:/ICC_Practice_with_David/2018_grad_cell_huffman/tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}}
