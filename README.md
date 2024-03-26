@@ -18,6 +18,9 @@
 
 [2022 B 初賽 - Job Assignment Machine](https://github.com/HUAIJIE0314/IC-Contest/tree/main/2022_B_pre)
 
+[2023 B 初賽 - Laser Treatment](https://github.com/HUAIJIE0314/IC-Contest/tree/main/2023_B_pre)
+
+
 `決賽`
 
 [2015 B 決賽 - Image Sorting Engine](https://github.com/HUAIJIE0314/IC-Contest/tree/main/2015_B_final)
