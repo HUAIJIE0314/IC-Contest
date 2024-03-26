@@ -20,6 +20,8 @@
 
 `決賽`
 
+[2015 B 決賽 - Image Sorting Engine](https://github.com/HUAIJIE0314/IC-Contest/tree/main/2015_B_final)
+
 ---
 
 class E(大學組)
@@ -41,7 +43,7 @@ class E(大學組)
 
 
 `決賽`
-[2015 B 決賽 - Image Sorting Engine](https://github.com/HUAIJIE0314/IC-Contest/tree/main/2015_B_final)
+
 
 [2018 E 決賽_Old - ]()
 
