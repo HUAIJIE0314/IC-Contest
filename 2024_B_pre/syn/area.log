@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : Bicubic
+Version: U-2022.12
+Date   : Thu Jan 16 14:21:08 2025
+****************************************
+
+Library(s) Used:
+
+    slow (File: /home/raid7_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/slow.db)
+    ResultSRAM (File: /home/raid7_2/user13/r13115/Desktop/ICC_Practice_with_Ray/2024_grad_cell_Bicubic/ResultSRAM_slow.db)
+    ImgROM (File: /home/raid7_2/user13/r13115/Desktop/ICC_Practice_with_Ray/2024_grad_cell_Bicubic/ImgROM_slow.db)
+
+Number of ports:                           39
+Number of nets:                          7658
+Number of cells:                         6662
+Number of combinational cells:           6338
+Number of sequential cells:               322
+Number of macros/black boxes:               2
+Number of buf/inv:                        915
+Number of references:                     150
+
+Combinational area:             121262.255969
+Buf/Inv area:                     7288.635633
+Noncombinational area:           10870.149529
+Macro/Black Box area:           556725.953125
+Net Interconnect area:          746997.073975
+
+Total cell area:                688858.358622
+Total area:                    1435855.432597
+1

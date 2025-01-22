@@ -1,0 +1,102 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : Bicubic
+Version: U-2022.12
+Date   : Thu Jan 16 14:21:08 2025
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: curState_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: SRAM_wdata_reg[4]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Bicubic            tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  curState_reg[1]/CK (DFFRX4)              0.00       0.50 r
+  curState_reg[1]/Q (DFFRX4)               0.50       1.00 f
+  U2772/Y (NOR2X8)                         0.10       1.10 r
+  U2193/Y (NAND2X8)                        0.11       1.21 f
+  U5389/Y (BUFX16)                         0.16       1.37 f
+  U2643/Y (INVX16)                         0.08       1.44 r
+  U1232/Y (NAND2X4)                        0.09       1.53 f
+  U2803/Y (NAND2X8)                        0.20       1.73 r
+  U3267/Y (INVX12)                         0.15       1.88 f
+  U1189/Y (NOR2X2)                         0.17       2.06 r
+  U3369/CO (ADDHX2)                        0.21       2.27 r
+  U3372/S (ADDFHX4)                        0.32       2.58 r
+  U3396/S (ADDFHX4)                        0.28       2.87 f
+  U3403/S (ADDFHX4)                        0.36       3.23 r
+  U2692/Y (XOR2X4)                         0.18       3.41 r
+  U2690/Y (XOR2X4)                         0.17       3.58 r
+  U3738/Y (XNOR2X4)                        0.19       3.76 r
+  U3739/Y (BUFX16)                         0.26       4.03 r
+  U1861/Y (NAND2X6)                        0.12       4.14 f
+  U1844/Y (INVX16)                         0.10       4.24 r
+  U3770/Y (INVX12)                         0.08       4.32 f
+  U4524/Y (AO21X2)                         0.29       4.61 f
+  U4555/S (ADDFHX2)                        0.29       4.90 r
+  U4551/S (ADDFHX2)                        0.36       5.26 r
+  U4526/Y (CLKXOR2X2)                      0.29       5.55 f
+  U4528/Y (CLKXOR2X2)                      0.30       5.85 f
+  U4575/S (ADDFHX4)                        0.37       6.22 r
+  U1315/Y (NOR2X4)                         0.08       6.30 f
+  U3175/Y (NOR2X6)                         0.16       6.46 r
+  U1731/Y (NAND3X6)                        0.13       6.60 f
+  U2994/Y (NAND3X8)                        0.16       6.76 r
+  U3071/Y (BUFX20)                         0.14       6.90 r
+  U2967/Y (NAND2X8)                        0.08       6.97 f
+  U755/Y (INVX4)                           0.09       7.06 r
+  U1724/Y (NAND2X6)                        0.07       7.14 f
+  U2818/Y (NAND3X8)                        0.11       7.25 r
+  U2819/Y (BUFX16)                         0.13       7.38 r
+  U3145/Y (XNOR2X4)                        0.13       7.51 r
+  U2614/Y (CLKINVX1)                       0.18       7.69 f
+  U2617/Y (OAI2BB2X4)                      0.18       7.87 f
+  U5102/CO (ADDFHX4)                       0.22       8.09 f
+  U677/CO (ADDFHX2)                        0.24       8.33 f
+  U5298/S (ADDFHX4)                        0.30       8.63 f
+  U2620/Y (OAI21X2)                        0.13       8.76 r
+  U2619/Y (OAI2BB1X4)                      0.16       8.92 f
+  U5412/Y (NAND2X2)                        0.15       9.07 r
+  U2812/Y (OAI21X4)                        0.11       9.18 f
+  U2535/Y (NAND2X6)                        0.09       9.26 r
+  U2531/Y (NAND3X8)                        0.11       9.37 f
+  U2529/Y (NAND2X8)                        0.08       9.46 r
+  U2600/Y (NAND3X8)                        0.08       9.54 f
+  U2773/Y (INVX12)                         0.07       9.61 r
+  U2858/Y (INVX20)                         0.07       9.68 f
+  U2955/Y (AOI21X4)                        0.15       9.83 r
+  U2954/Y (XNOR2X4)                        0.15       9.98 r
+  U2953/Y (NOR2X6)                         0.09      10.06 f
+  SRAM_wdata_reg[4]/D (EDFFXL)             0.00      10.06 f
+  data arrival time                                  10.06
+
+  clock CLK (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  SRAM_wdata_reg[4]/CK (EDFFXL)            0.00      10.40 r
+  library setup time                      -0.33      10.07
+  data required time                                 10.07
+  -----------------------------------------------------------
+  data required time                                 10.07
+  data arrival time                                 -10.06
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
