@@ -20,6 +20,7 @@
 
 [2023 B 初賽 - Laser Treatment](https://github.com/HUAIJIE0314/IC-Contest/tree/main/2023_B_pre)
 
+[2024 B 初賽 - Bicubic](https://github.com/HUAIJIE0314/IC_Contest/tree/main/2024_B_pre)
 
 `決賽`
 
