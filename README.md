@@ -25,7 +25,7 @@
 `決賽`
 
 [2015 B 決賽 - Image Sorting Engine](https://github.com/HUAIJIE0314/IC-Contest/tree/main/2015_B_final)
-
+[2018 B 決賽 - RF Indoor Localization Engine](https://github.com/HUAIJIE0314/IC_Contest/tree/main/2018_B_final)
 ---
 
 class E(大學組)
